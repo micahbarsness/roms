@@ -24,7 +24,7 @@ convert_ps2_iso() {
         [[ -f "$out" ]] && { echo "[SKIP] $out"; continue; }
 
         echo "[PS2 ISO] $file -> $out"
-        chdman createdvd -i "$file" -o "$out"
+        chdman createdvd -c zlib -i "$file" -o "$out"
         ;;
     esac
   done
